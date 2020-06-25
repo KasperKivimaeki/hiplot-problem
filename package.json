@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "author": {
-      "name" : "Kasper Kivimäki",
-      "email": "kasper.kivimaki@aalto.fi"
+    "name": "Kasper Kivimäki",
+    "email": "kasper.kivimaki@aalto.fi"
   },
   "dependencies": {
     "hiplot": "^0.1.12",
