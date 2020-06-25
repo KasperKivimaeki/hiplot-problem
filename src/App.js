@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {HiPlot, Experiment} from 'hiplot';
+
+function HiPlotWithData() {
+    const experiment = Experiment.from_iterable([
+        {'opt': 'sgd', 'lr': 0.01, 'dropout': 0.1},
+        {'opt': 'adam', 'lr': 0.1, 'dropout': 0.2},
+        {'opt': 'adam', 'lr': 1., 'dropout': 0.3},
+        {'opt': 'sgd', 'lr': 0.001, 'dropout': 0.4},
+    ]);
+    return <HiPlot experiment={experiment} />;
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {HiPlotWithData()}
     </div>
   );
 }
